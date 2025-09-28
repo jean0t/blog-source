@@ -1,0 +1,32 @@
+{namespace coleslaw.theme.minimal}
+{template index}
+<section>
+  <header>
+    <h3>{$index.title}</h3>
+  </header>
+
+  <ol>
+  {foreach $obj in $index.content}
+  {if index($obj) < 7}
+    <li>
+      <article>
+        <header>
+	  <hgroup>
+            <h3><a href="{$config.domain}/{$obj.url}" style="text-decoration: none;">{$obj.title}</a></h3>
+            <p><time>{$obj.date}</time></p>
+	  </hgroup>
+        </header>
+          {$obj.excerpt |noAutoescape}
+	<footer>
+	  <p><a href="{$config.domain}/{$obj.url}">Read more →</a></p>
+	</footer>
+      </article>
+    </li>
+    {/if}
+  {/foreach}
+    <li>
+      <a href="{$config.domain}/archive.html">more...</a>
+    </li>
+  </ol>
+</section>
+{/template}

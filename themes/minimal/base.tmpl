@@ -1,0 +1,44 @@
+{namespace coleslaw.theme.minimal}
+{template base}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{if $content.title}{$content.title} - {$config.title}{else}{$config.title}{/if}</title>
+    <!-- Pico.css CDN (no JS) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.jade.min.css">
+    <!-- optional theme overrides (static file inside theme) -->
+    <link rel="stylesheet" href="/themes/pico/static/theme.css">
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <a href="{$config.domain}/index.html"><h1>{$config.title}</h1></a>
+        <ul>
+          <li><a href="{$config.domain}/index.html">Home</a></li>
+          <li><a href="{$config.domain}/archive.html">Archive</a></li>
+	  <li><a href="{$config.domain}/about.html">About</a></li>
+	  {foreach $link in $config.sitenav}
+	    {if $link.relative}
+	      <li><a href="{$config.domain}/{$link.url}" target="_blank">{$link.name}</a></li>
+	    {else}
+	      <li><a href="{$link.url}" target="_blank">{$link.name}</a></li>
+	    {/if}
+	  {/foreach}
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      {$raw |noAutoescape}
+    </main>
+
+    <footer class="container">
+      <small>
+        {if $config.author}{$config.author} (CC) 2025 -{/if} {$config.title} - <a href="{$config.domain}/rss.xml">RSS</a>
+      </small>
+    </footer>
+  </body>
+</html>
+{/template}

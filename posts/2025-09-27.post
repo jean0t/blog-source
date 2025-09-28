@@ -1,0 +1,18 @@
+;;;;;
+title: why common lisp became my favorite
+tags: common lisp, programming
+date: 2025-09-27 21:28:15
+format: md
+excerpt: Common lisp is now my favorite programming language and it can be yours too
+;;;;;
+
+<!-- **** your post here (remove this line) **** -->
+<!-- format: could be 'html' (for raw html) or 'md' (for markdown).  -->
+
+Here is my content.
+
+<!--more-->
+
+Excerpt separator can also be extracted from content.
+Add `excerpt: <string>` to the above metadata.
+Excerpt separator is `<!--more-->` by default.

@@ -1,0 +1,24 @@
+{namespace coleslaw.theme.minimal}
+{template post}
+<article>
+  <header>
+    <hgroup>
+      <h1>{$post.title}</h1>
+      <p><time>{$post.date}</time></p>
+    {if $post.tags}
+      <p>
+        {foreach $t in $post.tags}
+          <a href="{$config.domain}/tag/{$t.slug}.html">{$t.name}</a>{if not isLast($t)}, {/if}
+        {/foreach}
+      </p>
+    {/if}
+    </hgroup>
+  </header>
+
+    {$post.text |noAutoescape}
+
+  <footer>
+    <p style="text-align: center;">λ</p>
+  </footer>
+</article>
+{/template}
