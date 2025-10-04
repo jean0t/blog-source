@@ -26,7 +26,7 @@ Another aspect that made me think it is magical is it pragmaticality, its debug 
 Related to this interactive debug comes the fact lisp is interpreted, but forget your concept about slow languages like python/ruby or memory eater like javascript, Lisp is fast, lightweight and offers compilation, sometimes native compilation binary depending on the lisp implementation you are using.  
 Famous versions of lisp are: emacs lisp, lisp flavored erlang, clojure, common lisp, scheme, guile, etc.  
 
-And I didn't even mentioned the powerful system of macros that can literally implement new paradigms to the language.
+And I didn't even mentioned the powerful system of macros that can literally implement new paradigms to the language.c
 
 
 ##### Common lisp is reliable, powerful, fast, dynamic, customizable and multiple. Just choose the version you love and dive in.

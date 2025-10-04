@@ -29,4 +29,14 @@
     </li>
   </ol>
 </section>
+{if $months}
+<hr />
+<p>View content from</p>
+<div class="grid">
+  {foreach $month in $months}
+    <div><a href="{$config.domain}/{$month.url}">{$month.name}</a></div>{nil}
+    {if not isLast($month)},{sp}{/if}
+  {/foreach}
+</div>
+{/if}
 {/template}
